@@ -1,11 +1,11 @@
 /* eslint-disable camelcase */
 // import { clerkClient } from "@clerk/nextjs";
-import { WebhookEvent } from "@clerk/nextjs/server";
-import { headers } from "next/headers";
+// import { WebhookEvent } from "@clerk/nextjs/server";
+// import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 // import { Webhook } from "svix";
 
-import { createUser, deleteUser, updateUser } from "@/lib/actions/user.actions";
+// import { createUser, deleteUser, updateUser } from "@/lib/actions/user.actions";
 
 export async function POST(req: Request) {
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
@@ -18,7 +18,7 @@ export async function POST(req: Request) {
   }
 
   // Get the headers
-  const headerPayload = headers();
+  // const headerPayload = headers();
   // const svix_id = headerPayload.get("svix-id");
   // const svix_timestamp = headerPayload.get("svix-timestamp");
   // const svix_signature = headerPayload.get("svix-signature");
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
   // Create a new Svix instance with your secret.
   // const wh = new Webhook(WEBHOOK_SECRET);
 
-  let evt: WebhookEvent;
+  // let evt: WebhookEvent;
 
   // Verify the payload with the headers
   // try {
